@@ -1,0 +1,24 @@
+{
+  "name": "booking-site",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "express": "^4.16.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.1.0",
+    "gulp-nodemon": "^2.5.0",
+    "gulp-sass": "^3.2.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "node-sass": "^4.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "yunus",
+  "license": "ISC",
+  "description": ""
+}
