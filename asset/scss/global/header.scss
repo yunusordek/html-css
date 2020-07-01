@@ -2,6 +2,7 @@
 border-bottom: 1px solid #ddd;
 
     .container{
+        position: relative;
         display:flex;
         align-items: center;//tüm elemanları ortalar
         height: 64px;
@@ -13,14 +14,32 @@ border-bottom: 1px solid #ddd;
         margin-left: auto;
         @include mq{
             display: none;
-
         }
-
      }
 
 
     &-menu{   
-        display: none;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateX(100%);//switch'e tıklandığında menu sağdan gelir
+        transition: .2s;
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        padding-left: $gutter;
+        padding-right: $gutter;
+        padding-bottom: 20px;
+        flex-direction: column;
+        background-color: white;
+        box-shadow: 0 10px 20px rgba(black, .2);
+
+        .Header.menu-show & {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
         @include mq("tablet"){
             display: flex;// içindekileri yan yana getirir
             margin-left: auto;
@@ -29,9 +48,15 @@ border-bottom: 1px solid #ddd;
         &-user{
             margin-right: 10px;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            
             a{
+                width: 100%;
                 display:inline-flex;
                 align-items: center;
+                justify-content: center;
                 padding-left: 20px;
                 padding-right: 20px;
                 height: $finger-size;
@@ -40,14 +65,22 @@ border-bottom: 1px solid #ddd;
                     background-color: #eee;
                 }
              
-
             }
+        }
+        &-property{
+            margin-top: 20px;
+            justify-content: center;
         }
        
 
         &-helper{
-            margin-left: 20px;
+            margin-top: 20px;
             display: flex;
+            justify-content: center;
+            @include mq("tablet"){
+                margin-left: 20px;
+            }
+
 
             select{
                 appearance: none;
