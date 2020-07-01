@@ -354,7 +354,9 @@ td {
 .container {
   max-width: 1200px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 a {
   color: #083B87; }
@@ -377,6 +379,14 @@ body {
   background-color: #01ACEE;
   border-radius: 3px; }
 
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
 .Header {
   border-bottom: 1px solid #ddd; }
   .Header .container {
@@ -386,14 +396,22 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px; }
+    height: 64px; }
+  .Header-switch {
+    margin-left: auto; }
+    @media (min-width: 768px) {
+      .Header-switch {
+        display: none; } }
   .Header-menu {
-    margin-left: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    display: none; }
+    @media (min-width: 768px) {
+      .Header-menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: auto; } }
     .Header-menu-user {
+      margin-right: 10px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
@@ -409,5 +427,28 @@ body {
         height: 40px; }
         .Header-menu-user a:hover {
           background-color: #eee; }
+    .Header-menu-helper {
+      margin-left: 20px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .Header-menu-helper select {
+        -webkit-appearance: none;
+           -moz-appearance: none;
+                appearance: none;
+        background-color: transparent;
+        border: 1px solid #E0E6F1;
+        padding-left: 10px;
+        padding-right: 10x;
+        border-radius: 0;
+        height: 40px;
+        color: #083B87; }
+        .Header-menu-helper select:nth-child(1) {
+          border-bottom-left-radius: 3px;
+          border-top-left-radius: 3px; }
+        .Header-menu-helper select:nth-child(2) {
+          border-left-width: 0;
+          border-bottom-right-radius: 3px;
+          border-top-right-radius: 3px; }
   .Header-logo img {
     width: 144px; }

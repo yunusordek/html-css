@@ -1,0 +1,87 @@
+.Header{
+border-bottom: 1px solid #ddd;
+
+    .container{
+        display:flex;
+        align-items: center;//tüm elemanları ortalar
+        height: 64px;
+
+
+    }
+
+    &-switch{
+        margin-left: auto;
+        @include mq{
+            display: none;
+
+        }
+
+     }
+
+
+    &-menu{   
+        display: none;
+        @include mq("tablet"){
+            display: flex;// içindekileri yan yana getirir
+            margin-left: auto;
+        }
+
+        &-user{
+            margin-right: 10px;
+            display: flex;
+            a{
+                display:inline-flex;
+                align-items: center;
+                padding-left: 20px;
+                padding-right: 20px;
+                height: $finger-size;
+                
+                &:hover{
+                    background-color: #eee;
+                }
+             
+
+            }
+        }
+       
+
+        &-helper{
+            margin-left: 20px;
+            display: flex;
+
+            select{
+                appearance: none;
+                background-color: transparent;
+                border: 1px solid #E0E6F1;
+                padding-left: 10px;
+                padding-right: 10x;
+                border-radius:0;
+                height: $finger-size;
+                color:$color-navy;
+                
+                &:nth-child(1){
+                    border-bottom-left-radius: $border-radius;
+                    border-top-left-radius: $border-radius;
+
+                }
+                &:nth-child(2){
+                    border-left-width: 0;
+                    border-bottom-right-radius: $border-radius;
+                    border-top-right-radius: $border-radius;
+
+                }
+            }
+
+            
+        }
+
+    }
+    &-logo{
+       img{
+        width: 144px;
+
+       }
+
+    }
+
+}

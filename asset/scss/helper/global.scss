@@ -2,6 +2,8 @@
     max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
+    padding-left:$gutter;
+    padding-right: $gutter;
  
     
 }
@@ -23,3 +25,11 @@ body{
     border-radius: $border-radius;
 
 }
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
