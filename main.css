@@ -376,13 +376,24 @@ body {
   height: 40px;
   color: white;
   font-weight: bold;
-  background-color: #01ACEE;
+  background-color: transparent;
   border-radius: 3px; }
+  .button-icon {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: black;
+    padding-left: 0;
+    padding-right: 0;
+    width: 40px; }
+  .button-blue {
+    color: white;
+    background-color: #01ACEE; }
 
 .icon {
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor; }
@@ -399,6 +410,8 @@ body {
             align-items: center;
     height: 64px; }
   .Header-switch {
+    position: relative;
+    left: 10px;
     margin-left: auto; }
     @media (min-width: 768px) {
       .Header-switch {
@@ -430,14 +443,26 @@ body {
     .Header.menu-show .Header-menu {
       opacity: 1;
       -webkit-transform: translateY(0);
-              transform: translateY(0);
-      pointer-events: auto; }
+              transform: translateY(0); }
     @media (min-width: 768px) {
       .Header-menu {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin-left: auto; } }
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-transition: 0s;
+        transition: 0s;
+        margin-left: auto;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        position: static;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+        background-color: transparent;
+        padding-left: 0;
+        padding-right: 0;
+        padding-bottom: 0; } }
     .Header-menu-user {
       margin-right: 10px;
       display: -webkit-box;
@@ -450,6 +475,12 @@ body {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center; }
+      @media (min-width: 768px) {
+        .Header-menu-user {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: row;
+                  flex-direction: row; } }
       .Header-menu-user a {
         width: 100%;
         display: -webkit-inline-box;
@@ -471,6 +502,9 @@ body {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; }
+      @media (min-width: 768px) {
+        .Header-menu-property {
+          margin-top: 0; } }
     .Header-menu-helper {
       margin-top: 20px;
       display: -webkit-box;
@@ -481,7 +515,8 @@ body {
               justify-content: center; }
       @media (min-width: 768px) {
         .Header-menu-helper {
-          margin-left: 20px; } }
+          margin-left: 20px;
+          margin-top: 0; } }
       .Header-menu-helper select {
         -webkit-appearance: none;
            -moz-appearance: none;

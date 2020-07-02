@@ -11,6 +11,8 @@ border-bottom: 1px solid #ddd;
     }
 
     &-switch{
+        position: relative; //mevcut olan pozisyonundan sola kaydırıldı.
+        left:10px; //switch menü arka plansız fazla ortalı duruyor. hizalamak için
         margin-left: auto;
         @include mq{
             display: none;
@@ -23,7 +25,7 @@ border-bottom: 1px solid #ddd;
         opacity: 0;
         transform: translateX(100%);//switch'e tıklandığında menu sağdan gelir
         transition: .2s;
-        display: flex;
+        display: flex;// içindekileri yan yana getirir
         position: absolute;
         left: 0;
         right: 0;
@@ -38,19 +40,33 @@ border-bottom: 1px solid #ddd;
         .Header.menu-show & {
             opacity: 1;
             transform: translateY(0);
-            pointer-events: auto;
+            
         }
         @include mq("tablet"){
-            display: flex;// içindekileri yan yana getirir
+            //mobilde tanımlı her şeyi sıfırlıyoruz
+            opacity: 1;
+            transform: translateY(0);
+            transition: 0s;
             margin-left: auto;
+            flex-direction: row;
+            position: static;//daha önce tanımlanan right left vb değerleri sıfırlar. Statik yerine getirir
+            box-shadow: none;
+            background-color: transparent;
+            padding-left: 0;
+            padding-right: 0;
+            padding-bottom: 0;
+
         }
+
 
         &-user{
             margin-right: 10px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            
+            @include mq("tablet"){
+                flex-direction: row;
+            }
             
             a{
                 width: 100%;
@@ -70,6 +86,11 @@ border-bottom: 1px solid #ddd;
         &-property{
             margin-top: 20px;
             justify-content: center;
+            @include mq("tablet"){
+                margin-top: 0;
+
+            }
+
         }
        
 
@@ -79,6 +100,8 @@ border-bottom: 1px solid #ddd;
             justify-content: center;
             @include mq("tablet"){
                 margin-left: 20px;
+                margin-top: 0;
+
             }
 
 

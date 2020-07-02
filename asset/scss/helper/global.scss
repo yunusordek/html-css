@@ -13,6 +13,7 @@ a{
 body{
     font-family: $font-family;
 }
+
 .button{
     display:inline-flex;
     align-items: center;
@@ -21,14 +22,27 @@ body{
     height: $finger-size;
     color:white;
     font-weight: bold;
-    background-color:$color-blue;
+    background-color:transparent;
     border-radius: $border-radius;
 
+    //sadece içine icon koyulan butonlar için
+    &-icon{
+        justify-content: center;
+        color: black;
+        padding-left: 0;
+        padding-right: 0;
+        width: $finger-size;
+    
+    }
+    &-blue{
+        color:white;
+        background-color: $color-blue;
+    }
 }
 .icon {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
