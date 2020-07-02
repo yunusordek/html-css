@@ -351,6 +351,9 @@ table {
 td {
   padding: 0; }
 
+body {
+  font-family: "Open Sans", "Arial", sans-serif; }
+
 .container {
   max-width: 1200px;
   margin-left: auto;
@@ -360,9 +363,6 @@ td {
 
 a {
   color: #083B87; }
-
-body {
-  font-family: "Open Sans", "Arial", sans-serif; }
 
 .button {
   display: -webkit-inline-box;
@@ -399,7 +399,8 @@ body {
   fill: currentColor; }
 
 .Header {
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  height: 68px; }
   .Header .container {
     position: relative;
     display: -webkit-box;
@@ -408,7 +409,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 64px; }
+    height: 100%; }
   .Header-switch {
     position: relative;
     left: 10px;
@@ -419,8 +420,6 @@ body {
   .Header-menu {
     pointer-events: none;
     opacity: 0;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
     -webkit-transition: .2s;
     transition: .2s;
     display: -webkit-box;
@@ -441,9 +440,8 @@ body {
     -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
     .Header.menu-show .Header-menu {
-      opacity: 1;
-      -webkit-transform: translateY(0);
-              transform: translateY(0); }
+      pointer-events: auto;
+      opacity: 1; }
     @media (min-width: 768px) {
       .Header-menu {
         opacity: 1;
@@ -537,3 +535,18 @@ body {
           border-top-right-radius: 3px; }
   .Header-logo img {
     width: 144px; }
+
+.Navigation {
+  height: 50px;
+  background-color: #ADD8E6; }
+  .Navigation .container {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .Navigation-item {
+    margin-right: 20px;
+    font-size: 0.86em; }

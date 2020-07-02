@@ -1,3 +1,7 @@
+body{
+    font-family: $font-family;
+}
+
 .container{
     max-width: $max-width;
     margin-left: auto;
@@ -10,9 +14,7 @@
 a{
     color: $color-navy;
 }
-body{
-    font-family: $font-family;
-}
+
 
 .button{
     display:inline-flex;

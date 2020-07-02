@@ -1,13 +1,12 @@
 .Header{
 border-bottom: 1px solid #ddd;
+height: 68px;
 
     .container{
         position: relative;
         display:flex;
         align-items: center;//tüm elemanları ortalar
-        height: 64px;
-
-
+        height: 100%;
     }
 
     &-switch{
@@ -23,7 +22,7 @@ border-bottom: 1px solid #ddd;
     &-menu{   
         pointer-events: none;
         opacity: 0;
-        transform: translateX(100%);//switch'e tıklandığında menu sağdan gelir
+        //transform: translateX(100%);//switch'e tıklandığında menu sağdan gelir
         transition: .2s;
         display: flex;// içindekileri yan yana getirir
         position: absolute;
@@ -38,8 +37,9 @@ border-bottom: 1px solid #ddd;
         box-shadow: 0 10px 20px rgba(black, .2);
 
         .Header.menu-show & {
+            pointer-events: auto;
             opacity: 1;
-            transform: translateY(0);
+            //transform: translateY(0);
             
         }
         @include mq("tablet"){
