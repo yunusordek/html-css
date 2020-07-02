@@ -355,7 +355,7 @@ body {
   font-family: "Open Sans", "Arial", sans-serif; }
 
 .container {
-  max-width: 1200px;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -550,3 +550,24 @@ a {
   .Navigation-item {
     margin-right: 20px;
     font-size: 0.86em; }
+
+.Showcase {
+  text-align: center;
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #083B87; }
+
+.Search {
+  background-color: #FBBE00;
+  padding: 40px;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); }
+  .Search-form {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .Search .asd {
+    position: absolute;
+    right: 0; }
