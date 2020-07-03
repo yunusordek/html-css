@@ -91,6 +91,7 @@ a{
   .form-item{
       position: relative;
     .icon{
+        pointer-events: none;
         position: absolute;
         left: 10px;
         top: 50%;

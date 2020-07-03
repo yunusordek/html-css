@@ -441,6 +441,7 @@ a {
 .form-item {
   position: relative; }
   .form-item .icon {
+    pointer-events: none;
     position: absolute;
     left: 10px;
     top: 50%;
@@ -698,7 +699,9 @@ a {
   @media (min-width: 768px) {
     .Search {
       padding: 50px 30px;
-      margin-top: 50px; } }
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-right: 100px; } }
   .Search-form {
     position: relative;
     display: -webkit-box;
@@ -719,9 +722,6 @@ a {
                 flex-direction: row; } }
     .Search-form-item {
       width: 100%; }
-      @media (min-width: 768px) {
-        .Search-form-item {
-          width: auto; } }
       .Search-form-item + .Search-form-item {
         margin-top: 20px; }
         @media (min-width: 768px) {

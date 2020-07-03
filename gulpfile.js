@@ -4,6 +4,7 @@ const sass = require('gulp-sass')
 const nodemon = require('gulp-nodemon')
 const prefix = require('gulp-autoprefixer')
 const sourcemaps = require('gulp-sourcemaps')
+const pug = require('gulp-pug')
 const reload = browserSync.reload
 
 gulp.task('browser-sync', function () {
@@ -13,7 +14,7 @@ gulp.task('browser-sync', function () {
       baseDir: './'
     }
   })
-  gulp.watch('./**/*.html').on('change', reload)
+  gulp.watch('./**/*.pug',['html'])
   gulp.watch("./**/*.scss", ['css']);
 })
 
@@ -25,4 +26,12 @@ gulp.task('css', () => {
   .pipe(browserSync.stream())
 })
 
-gulp.task('default', ['browser-sync', 'css'])
+
+gulp.task('html', () => {
+  return gulp.src('./views/*.pug')
+  .pipe(pug())
+  .pipe(gulp.dest('./'))
+  .on('end',browserSync.reload)
+})
+
+gulp.task('default', ['browser-sync', 'html', 'css'])

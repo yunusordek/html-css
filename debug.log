@@ -1,2 +1,6 @@
 [0612/164355.029:ERROR:file_io.cc(89)] ReadExactly: expected 152, observed 40
 [0613/143015.723:ERROR:settings.cc(325)] Settings version is not 1
+[0703/195904.447:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0703/195904.619:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0703/195904.697:ERROR:exception_snapshot_win.cc(98)] thread ID 7308 not found in process
+[0703/195904.697:ERROR:exception_snapshot_win.cc(98)] thread ID 6200 not found in process

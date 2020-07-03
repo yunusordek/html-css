@@ -46,12 +46,15 @@
 .Search{
     text-align: left;
     margin-top: 30px;
+
     background-color: $color-yellow;
     padding:$gutter;
     box-shadow: 0 20px 40px rgba(black, .2);
     @include mq("tablet"){
         padding:50px 30px ;
         margin-top: 50px;
+        margin-left: 100px;
+        margin-right: 100px;
     }
 
  
@@ -68,7 +71,7 @@
         &-item{
             width: 100%;
             @include mq("tablet"){
-                width: auto;
+               
             }
             & + &{
                 //search-form-item kendisinden sonra gelirse gerçekleşecek işlemler
