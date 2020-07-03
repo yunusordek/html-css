@@ -7,3 +7,7 @@ $('.Header-switch').on('click', function () {
         $('.Header').addClass('menu-show')
     }
   })
+  $('.Highlight-slider').flickity({
+    cellAlign: 'left',
+    contain: true
+  })

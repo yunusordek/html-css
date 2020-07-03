@@ -38,10 +38,14 @@
             color:inherit;
             display: block;
             @include mq("tablet"){
-
                 margin-right: 10px;
-                margin-left: 10px;
-                
+                margin-left: 10px; 
+            }
+            & + a{
+                margin-top: 5px;
+                @include mq("tablet"){
+                    margin-top: 0;
+                }
             }
 
             &:hover{
@@ -71,6 +75,7 @@
             @include mq ("tablet"){
                 height: 50px;
             }
+
             
 
             &:hover{
@@ -95,7 +100,7 @@
     padding:$gutter;
     box-shadow: 0 20px 40px rgba(black, .2);
     @include mq("tablet"){
-        padding:50px 30px ;
+        padding:50px;
         margin-top: 50px;
         margin-left: 100px;
         margin-right: 100px;
@@ -146,6 +151,20 @@
         .checkbox{
             margin-left: 10px;
         }
+
+    }
+
+}
+
+.Highlight{
+    &-slider{
+
+
+    }
+    &-item{
+        width: 33%;
+        height: 120px;
+        background-color: yellow;
 
     }
 
