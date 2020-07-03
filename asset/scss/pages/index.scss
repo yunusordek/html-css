@@ -1,24 +1,76 @@
 .Showcase{
-    text-align: center;
     color: white;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color:$color-navy ;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: $color-navy url(asset/img/showcase_back.jpg) no-repeat center center / cover ;
+    text-align: center;
+
+    @include mq("tablet"){
+        //mobilde tanımlı her şeyi sıfırlıyoruz
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+    }
+
+    &-title{
+        
+    }
+    &-subtitle{
+        margin-top: 10px;
+    }
+
 }
 .Search{
+    text-align: left;
+    margin-top: 30px;
     background-color: $color-yellow;
-    padding: 40px;
+    padding:$gutter;
     box-shadow: 0 20px 40px rgba(black, .2);
+    @include mq("tablet"){
+        padding:50px 30px ;
+    }
+
+ 
     &-form{
         position: relative;//form içindekilerin dışa taşmaması için
         display: flex;
+        flex-direction: column ; // alt alta getirir
+        align-items: flex-start;
+
+        @include mq("tablet"){
+            flex-direction: row; 
+        }
+
+        &-item{
+            & + &{
+                //search-form-item kendisinden sonra gelirse gerçekleşecek işlemler
+                margin-top: 20px;
+
+                @include mq("tablet"){
+                    flex-grow: 1 ;
+                    margin-top: 0; 
+                    margin-left: 10px;
+                }
+            }
+        }
+
+    }
+    .form-work{
+        font-size:$font-size-small ;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+
+        @include mq("tablet"){
+            position: absolute;
+            top:100%;
+         
+        }
+
+        .checkbox{
+            margin-left: 10px;
+        }
 
     }
 
-
-    .asd{
-        position: absolute;
-        right: 0;
-
-    }
 }
