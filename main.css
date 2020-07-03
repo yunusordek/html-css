@@ -366,7 +366,9 @@ h1, h2, h3 {
   padding-right: 20px; }
 
 a {
-  color: #083B87; }
+  color: #083B87;
+  -webkit-transition: .15s;
+  transition: .15s; }
 
 .select, .button, .text {
   font-family: inherit;
@@ -672,22 +674,66 @@ a {
       .Showcase-subtitle {
         font-size: 1.6em; } }
   .Showcase-shortlink {
-    margin-top: 50px;
+    margin-top: 40px; }
+    @media (min-width: 768px) {
+      .Showcase-shortlink {
+        margin-top: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .Showcase-shortlink a {
+      color: inherit;
+      display: block; }
+      @media (min-width: 768px) {
+        .Showcase-shortlink a {
+          margin-right: 10px;
+          margin-left: 10px; } }
+      .Showcase-shortlink a:hover {
+        text-decoration: underline; }
+  .Showcase-store {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-top: 40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center; }
-    .Showcase-shortlink a {
-      color: inherit;
+    .Showcase-store-link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      height: 45px;
+      padding-left: 10px;
+      padding-right: 10px;
+      background-color: rgba(0, 0, 0, 0.2);
       margin-right: 10px;
-      margin-left: 10px; }
-      .Showcase-shortlink a:hover {
-        text-decoration: underline; }
+      margin-left: 10px;
+      border-radius: 3px; }
+      @media (min-width: 768px) {
+        .Showcase-store-link {
+          height: 50px; } }
+      .Showcase-store-link:hover {
+        background-color: rgba(0, 0, 0, 0.3); }
+      .Showcase-store-link img {
+        width: 90px; }
+        @media (min-width: 768px) {
+          .Showcase-store-link img {
+            width: 110px; } }
 
 .Search {
   text-align: left;

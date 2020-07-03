@@ -25,21 +25,65 @@
     }
 
     &-shortlink{
-        margin-top: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        margin-top: 40px;
+        @include mq("tablet"){
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
 
         a{
             color:inherit;
-            margin-right: 10px;
-            margin-left: 10px;
+            display: block;
+            @include mq("tablet"){
+
+                margin-right: 10px;
+                margin-left: 10px;
+                
+            }
 
             &:hover{
                 text-decoration: underline;
             }
         }
 
+    }
+    &-store{
+        display: flex;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+
+
+        &-link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 45px;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color: rgba(black, .2);
+            margin-right:10px ;
+            margin-left: 10px;
+            border-radius: $border-radius;
+            @include mq ("tablet"){
+                height: 50px;
+            }
+            
+
+            &:hover{
+                background-color:rgba(black, .3);
+            }
+            img{
+                width: 90px;
+                @include mq ("tablet"){
+                    width: 110px;
+                }
+
+            }
+        }
     }
 
 }
