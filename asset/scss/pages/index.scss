@@ -7,16 +7,39 @@
 
     @include mq("tablet"){
         //mobilde tanımlı her şeyi sıfırlıyoruz
-        padding-top: 50px;
+        padding-top: 80px;
         padding-bottom: 50px;
 
     }
 
     &-title{
-        
+        @include mq("tablet"){
+            font-size: 3em;
+        }
     }
     &-subtitle{
         margin-top: 10px;
+        @include mq("tablet"){
+            font-size: 1.6em;
+        }
+    }
+
+    &-shortlink{
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+            color:inherit;
+            margin-right: 10px;
+            margin-left: 10px;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
     }
 
 }
@@ -28,6 +51,7 @@
     box-shadow: 0 20px 40px rgba(black, .2);
     @include mq("tablet"){
         padding:50px 30px ;
+        margin-top: 50px;
     }
 
  
@@ -42,6 +66,10 @@
         }
 
         &-item{
+            width: 100%;
+            @include mq("tablet"){
+                width: auto;
+            }
             & + &{
                 //search-form-item kendisinden sonra gelirse gerçekleşecek işlemler
                 margin-top: 20px;
@@ -63,8 +91,9 @@
 
         @include mq("tablet"){
             position: absolute;
-            top:100%;
-         
+            top:75%;
+            right: 0;
+                     
         }
 
         .checkbox{

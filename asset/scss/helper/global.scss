@@ -80,6 +80,7 @@ a{
     }
 }
 .select{
+    appearance: none;
     display: inline-block;
     width: 100%;   
     height:$finger-size;
@@ -109,9 +110,10 @@ a{
 
   }
   .form-description{
-      margin-top: 8px;
+      margin-top: 5px;
+      font-size: $font-size-small;
       @include mq("tablet"){
-       font-size: $font-size;
+       margin-top: 20px;
     }
 
   }
