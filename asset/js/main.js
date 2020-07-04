@@ -7,7 +7,23 @@ $('.Header-switch').on('click', function () {
         $('.Header').addClass('menu-show')
     }
   })
-  $('.Highlight-slider').flickity({
-    cellAlign: 'left',
-    contain: true
-  })
+
+var $carousel = $('.Highlight-slider').flickity({
+  cellAlign: 'left',
+  contain: true,
+  prevNextButtons: false,
+  pageDots: false
+})
+
+$('.Highlight-item:eq(0)').addClass('is-expanded')
+$carousel.flickity('reposition');
+
+$carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
+  if ( !cellElement ) {
+    return;
+  }
+  $carousel.find('.is-expanded').removeClass('is-expanded');
+  $( cellElement ).addClass('is-expanded');
+  $carousel.flickity('reposition');
+  $carousel.flickity('select',cellIndex);
+});

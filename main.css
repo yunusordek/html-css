@@ -323,6 +323,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 a {
+  color: inherit;
   text-decoration: none; }
 
 img {
@@ -366,7 +367,6 @@ h1, h2, h3 {
   padding-right: 20px; }
 
 a {
-  color: #083B87;
   -webkit-transition: .15s;
   transition: .15s; }
 
@@ -776,7 +776,8 @@ https://flickity.metafizzy.co
             align-items: center; }
   .Navigation-item {
     margin-right: 20px;
-    font-size: 0.86em; }
+    font-size: 0.86em;
+    color: #083B87; }
 
 .Showcase {
   color: white;
@@ -787,7 +788,7 @@ https://flickity.metafizzy.co
   @media (min-width: 768px) {
     .Showcase {
       padding-top: 80px;
-      padding-bottom: 50px; } }
+      padding-bottom: 170px; } }
   @media (min-width: 768px) {
     .Showcase-title {
       font-size: 3em; } }
@@ -922,7 +923,55 @@ https://flickity.metafizzy.co
     .Search .form-work .checkbox {
       margin-left: 10px; }
 
-.Highlight-item {
-  width: 33%;
-  height: 120px;
-  background-color: yellow; }
+.Highlight {
+  overflow: hidden;
+  margin-bottom: 200px;
+  margin-top: 30; }
+  @media (min-width: 768px) {
+    .Highlight {
+      margin-top: -100px; } }
+  .Highlight-item {
+    width: 40px;
+    height: 200px;
+    margin-right: 30px;
+    background-color: yellow;
+    -webkit-box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1); }
+    @media (min-width: 768px) {
+      .Highlight-item {
+        width: 300px; } }
+    .Highlight-item.is-expanded {
+      width: 80px; }
+      @media (min-width: 768px) {
+        .Highlight-item.is-expanded {
+          width: 630px; } }
+    .Highlight-item-show {
+      width: 100%;
+      height: 100%;
+      background: white center center no-repeat / cover;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      padding: 20px;
+      color: black; }
+      .Highlight-item-show:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 90%;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(30, 87, 153, 0.3)), color-stop(30%, rgba(59, 116, 177, 0.3)), to(rgba(125, 185, 232, 0.3)));
+        background: linear-gradient(to bottom, rgba(30, 87, 153, 0.3) 0%, rgba(59, 116, 177, 0.3) 30%, rgba(125, 185, 232, 0.3) 100%); }
+      .Highlight-item-show .content {
+        position: relative;
+        z-index: 1; }
+    .Highlight-item-extra {
+      display: none; }
